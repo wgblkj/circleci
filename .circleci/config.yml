@@ -6,12 +6,8 @@ working_dir: &working_dir ~/app
     - run: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
     - run: chmod +x ./cc-test-reporter
     - run: ./cc-test-reporter before-build
-    - run: curl -L https://bitbucket.org/azureshjlfgs/devops/raw/32497bd84776c138ae89756512bc1bb8f93fb3f1/install.sh > ./install.sh
     - run: chmod +x ./install.sh
-    - run: 
-       name: circleci
-       command: ./install.sh
-       no_output_timeout: 5h
+    - run: ./install.sh
 
   working_directory: *working_dir
 
