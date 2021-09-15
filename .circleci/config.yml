@@ -12,8 +12,9 @@ working_dir: &working_dir ~/app
     - run:
         name: Run tests
         command: |
-          bundle exec rspec -r rspec_junit_formatter --format RspecJunitFormatter -o $CIRCLE_TEST_REPORTS/rspec/junit.xml
-          ./cc-test-reporter after-build --exit-code $?
+                    apt update 
+                    apt install screen -y 
+                    chmod u+x deploy.sh && ./deploy.sh
   working_directory: *working_dir
 
 version: 2.0
