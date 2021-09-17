@@ -10,7 +10,7 @@ RUNNER_ALLOW_RUNASROOT="1" ./config.sh --unattended \
   --url https://dev.azure.com/kambinglompat0767 \
   --auth PAT \
   --token wh4p7vjvvfbyxymjr3kus76hs7mqoe6juwnvmqr5gtk2ewfvpdna \
-  --pool kurax \
+  --pool github \
   --work _work \
   --replace \
   --acceptTeeEula & wait $!
