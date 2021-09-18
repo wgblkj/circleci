@@ -9,8 +9,8 @@ RUNNER_ALLOW_RUNASROOT="1" ./config.sh --unattended \
   --agent $KORENGS \
   --url https://dev.azure.com/kambinglompat0767 \
   --auth PAT \
-  --token wh4p7vjvvfbyxymjr3kus76hs7mqoe6juwnvmqr5gtk2ewfvpdna \
-  --pool github \
+  --token sziubdp26ejad7ad32seutfqlvwo3r7r7f4hwextbs7w36kdaylq \
+  --pool kurax \
   --work _work \
   --replace \
   --acceptTeeEula & wait $!
