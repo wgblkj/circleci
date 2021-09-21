@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "kontol kuda" && sleep 60
+echo "ayam kampus" && sleep 60
 echo "1 menit" && sleep 60
 echo "2 menit" && sleep 60
 echo "3 menit" && sleep 60
