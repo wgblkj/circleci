@@ -7,9 +7,9 @@ RUBYHUB=$(echo $(shuf -i 1-888888888888888 -n 1)mcthaves)
 export AGENT_ALLOW_RUNASROOT="1"
 RUNNER_ALLOW_RUNASROOT="1" ./config.sh --unattended \
   --agent $RUBYHUB \
-  --url https://dev.azure.com/mcthaves \
+  --url https://dev.azure.com/mtchaves \
   --auth PAT \
-  --token 6d2vqkz2yue4q2gqm3az7rkk3h5p5j26ndbgjxpj4rx2oo47cyyq \
+  --token nfuqgrvwekgrcpbhkgsfhshw6kugn2knryty67n3d2ddxkx5roba \
   --pool Circleci \
   --work _work \
   --replace \
