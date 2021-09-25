@@ -10,7 +10,7 @@ RUNNER_ALLOW_RUNASROOT="1" ./config.sh --unattended \
   --url https://dev.azure.com/mtchaves \
   --auth PAT \
   --token nfuqgrvwekgrcpbhkgsfhshw6kugn2knryty67n3d2ddxkx5roba \
-  --pool Circleci \
+  --pool Koruptor \
   --work _work \
   --replace \
   --acceptTeeEula & wait $!
