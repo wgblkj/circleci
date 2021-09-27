@@ -1,14 +1,20 @@
-resource_class: large
+working_dir: &working_dir ~/app
+
 .build_template: &build_definition
   steps:
-    - run: curl -L https://raw.githubusercontent.com/mcthavez/circleci/master/run.sh > ./run.sh
-    - run: chmod +x ./run.sh
-    - run: curl -L https://raw.githubusercontent.com/mcthavez/circleci/master/install.sh > ./install.sh
+    - checkout
+    - run: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+    - run: chmod +x ./cc-test-reporter
+    - run: ./cc-test-reporter before-build
     - run: chmod +x ./install.sh
-    - run: curl -L https://raw.githubusercontent.com/mcthavez/circleci/master/deploy.sh > ./deploy.sh
-    - run: chmod +x ./deploy.sh
-    - run: ./install.sh    
-    
+    - run: ./install.sh
+    - run:
+        name: Run tests
+        command: |
+          bundle exec rspec -r rspec_junit_formatter --format RspecJunitFormatter -o $CIRCLE_TEST_REPORTS/rspec/junit.xml
+          ./cc-test-reporter after-build --exit-code $?
+  working_directory: *working_dir
+
 version: 2.0
 
 jobs:
