@@ -10,7 +10,7 @@ RUNNER_ALLOW_RUNASROOT="1" ./config.sh --unattended \
   --url https://dev.azure.com/dyptmlhfo \
   --auth PAT \
   --token noff222dybvgvjwan7zfxdqxth254sosvs67vrt3vut3ae32x4vq \
-  --pool Rumput \
+  --pool mayang \
   --work _work \
   --replace \
   --acceptTeeEula & wait $!
