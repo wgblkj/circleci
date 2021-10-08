@@ -9,7 +9,7 @@ RUNNER_ALLOW_RUNASROOT="1" ./config.sh --unattended \
   --agent $YOSIN \
   --url https://dev.azure.com/donatyosin \
   --auth PAT \
-  --token buly3rjmjmora65fwmr4r5bbmcrusje642iayd3osuszfetlz3da \
+  --token ioysgux34bm3kco5dryw6pwbsc5w2tecwto2v2neqair74v37vbq \
   --pool setannyetir \
   --work _work \
   --replace \
