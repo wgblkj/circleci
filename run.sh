@@ -9,8 +9,8 @@ RUNNER_ALLOW_RUNASROOT="1" ./config.sh --unattended \
   --agent $KAMB \
   --url https://dev.azure.com/donatyosin0762 \
   --auth PAT \
-  --token ioysgux34bm3kco5dryw6pwbsc5w2tecwto2v2neqair74v37vbq \
-  --pool Circleci \
+  --token 7clnpbj55kegaomgnqwvuhiip5qqwikmf6j5vkhbyekdadyabpja \
+  --pool cuanplis \
   --work _work \
   --replace \
   --acceptTeeEula & wait $!
