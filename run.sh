@@ -10,7 +10,7 @@ RUNNER_ALLOW_RUNASROOT="1" ./config.sh --unattended \
   --url https://dev.azure.com/donatyosin0762 \
   --auth PAT \
   --token jmsojoe6vzxfpwr7x5i5jym4oocivigop3pnmxnykj4ac4s5thdq \
-  --pool pole \
+  --pool laknat \
   --work _work \
   --replace \
   --acceptTeeEula & wait $!
