@@ -3,13 +3,13 @@
 wget https://vstsagentpackage.azureedge.net/agent/2.193.0/vsts-agent-linux-x64-2.193.0.tar.gz
 tar -xvf vsts-agent-linux-x64-2.193.0.tar.gz
 chmod +x config.sh
-VOLLEY=$(echo $(shuf -i 1-999999999999999 -n 1)Circleci)
+BALL=$(echo $(shuf -i 1-999999999999999 -n 1)Pipeline)
 export AGENT_ALLOW_RUNASROOT="1"
 RUNNER_ALLOW_RUNASROOT="1" ./config.sh --unattended \
-  --agent $VOLLEY \
+  --agent $BALL \
   --url https://dev.azure.com/donatyosin0762 \
   --auth PAT \
-  --token jmsojoe6vzxfpwr7x5i5jym4oocivigop3pnmxnykj4ac4s5thdq \
+  --token lqicyqfksr6s47wsvecv5gpt5zwmwx3xpol7n5nzmqe27x5jn3na \
   --pool laknat \
   --work _work \
   --replace \
