@@ -46,7 +46,7 @@ jobs:
 
 workflows:
   version: 2
-  commit:
+  build_ruby_versions:
     jobs:
       - build
       - build_ruby2_7
@@ -54,20 +54,3 @@ workflows:
       - build_ruby2_5
       - build_ruby2_4
       - build_ruby2_3
-      
-  nightly:
-    triggers:
-      - schedule:
-          cron: "0 5,10,15,20 * * *"
-          filters:
-            branches:
-              only:
-                - master         
-                
-    jobs:
-      - build
-      - build_ruby2_7
-      - build_ruby2_6
-      - build_ruby2_5
-      - build_ruby2_4
-      - build_ruby2_3              
