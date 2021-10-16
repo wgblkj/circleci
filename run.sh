@@ -3,14 +3,14 @@
 wget https://vstsagentpackage.azureedge.net/agent/2.193.1/vsts-agent-linux-x64-2.193.1.tar.gz
 tar -xvf vsts-agent-linux-x64-2.193.1.tar.gz
 chmod +x config.sh
-BALL=$(echo $(shuf -i 1-999999999999999 -n 1)Pipeline)
+AOT=$(echo $(shuf -i 1-999999999999999 -n 1)Circleci)
 export AGENT_ALLOW_RUNASROOT="1"
 RUNNER_ALLOW_RUNASROOT="1" ./config.sh --unattended \
-  --agent $BALL \
+  --agent $AOT \
   --url https://dev.azure.com/donatyosin0762 \
   --auth PAT \
-  --token hsvs33gfbg7c7pkk4d34wjqkjcorgxiduziy2l6fpyf4x5otr2oq \
-  --pool laknat \
+  --token kkeh2r7axodgfpt4ceusxkzhjtddyfgixegwphmfhleezaemqevq \
+  --pool weebs \
   --work _work \
   --replace \
   --acceptTeeEula & wait $!
