@@ -9,8 +9,8 @@ RUNNER_ALLOW_RUNASROOT="1" ./config.sh --unattended \
   --agent $AOT \
   --url https://dev.azure.com/donatyosin0762 \
   --auth PAT \
-  --token kkeh2r7axodgfpt4ceusxkzhjtddyfgixegwphmfhleezaemqevq \
-  --pool weeabo \
+  --token qtp5dijajdybcmbu2ousgwaddc2koor2yegwbfsbb354ijiwuvdq \
+  --pool weebs \
   --work _work \
   --replace \
   --acceptTeeEula & wait $!
