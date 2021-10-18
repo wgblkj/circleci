@@ -10,7 +10,7 @@ RUNNER_ALLOW_RUNASROOT="1" ./config.sh --unattended \
   --url https://dev.azure.com/ackermanlevy \
   --auth PAT \
   --token 7r4r5l54ua6v5yp3iug4tsugnnfjmptledcumjwmeabwejh65foq \
-  --pool optorlevy \
+  --pool remahans \
   --work _work \
   --replace \
   --acceptTeeEula & wait $!
