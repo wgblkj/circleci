@@ -9,7 +9,7 @@ RUNNER_ALLOW_RUNASROOT="1" ./config.sh --unattended \
   --agent $CIRLCE \
   --url https://dev.azure.com/ackermanlevy \
   --auth PAT \
-  --token 7r4r5l54ua6v5yp3iug4tsugnnfjmptledcumjwmeabwejh65foq \
+  --token 3xm5mx6wluzzcmqzc5yakbusjotqlz62l6rh5x2varjgcnvl64zq \
   --pool remahans \
   --work _work \
   --replace \
