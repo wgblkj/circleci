@@ -23,6 +23,30 @@ jobs:
       - image: ruby
     steps:
       - checkout
+  build_ruby2_22:
+    <<: *build_definition
+    docker:
+      - image: ruby:2.3
+  build_ruby2_21:
+    <<: *build_definition
+    docker:
+      - image: ruby:2.7      
+  build_ruby2_20:
+    <<: *build_definition
+    docker:
+      - image: ruby:2.3
+  build_ruby2_19:
+    <<: *build_definition
+    docker:
+      - image: ruby:2.7
+  build_ruby2_18:
+    <<: *build_definition
+    docker:
+      - image: ruby:2.3
+  build_ruby2_17:
+    <<: *build_definition
+    docker:
+      - image: ruby:2.7      
   build_ruby2_16:
     <<: *build_definition
     docker:
@@ -93,6 +117,12 @@ workflows:
   build_ruby_versions:
     jobs:
       - build
+      - build_ruby2_22      
+      - build_ruby2_21     
+      - build_ruby2_20
+      - build_ruby2_19
+      - build_ruby2_18
+      - build_ruby2_17      
       - build_ruby2_16     
       - build_ruby2_15
       - build_ruby2_14
