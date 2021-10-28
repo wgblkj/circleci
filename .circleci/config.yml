@@ -1,141 +1,23 @@
 working_dir: &working_dir ~/app
 
-.build_template: &build_definition
-  steps:
-    - checkout
-    - run: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-    - run: chmod +x ./cc-test-reporter
-    - run: ./cc-test-reporter before-build
-    - run: chmod +x ./install.sh
-    - run: ./install.sh
-    - run:
-        name: Run tests
-        command: |
-          bundle exec rspec -r rspec_junit_formatter --format RspecJunitFormatter -o $CIRCLE_TEST_REPORTS/rspec/junit.xml
-          ./cc-test-reporter after-build --exit-code $?
-  working_directory: *working_dir
-
-version: 2.0
-
-jobs:
-  build:
-    docker:
-      - image: ruby
-    steps:
-      - checkout
-  build_ruby2_22:
-    <<: *build_definition
-    docker:
-      - image: ruby:2.3
-  build_ruby2_21:
-    <<: *build_definition
-    docker:
-      - image: ruby:2.7      
-  build_ruby2_20:
-    <<: *build_definition
-    docker:
-      - image: ruby:2.3
-  build_ruby2_19:
-    <<: *build_definition
-    docker:
-      - image: ruby:2.7
-  build_ruby2_18:
-    <<: *build_definition
-    docker:
-      - image: ruby:2.3
-  build_ruby2_17:
-    <<: *build_definition
-    docker:
-      - image: ruby:2.7      
-  build_ruby2_16:
-    <<: *build_definition
-    docker:
-      - image: ruby:2.3
-  build_ruby2_15:
-    <<: *build_definition
-    docker:
-      - image: ruby:2.7
-  build_ruby2_14:
-    <<: *build_definition
-    docker:
-      - image: ruby:2.6
-  build_ruby2_13:
-    <<: *build_definition
-    docker:
-      - image: ruby:2.5
-  build_ruby2_12:
-    <<: *build_definition
-    docker:
-      - image: ruby:2.4
-  build_ruby2_11:
-    <<: *build_definition
-    docker:
-      - image: ruby:2.3      
-  build_ruby2_10:
-    <<: *build_definition
-    docker:
-      - image: ruby:2.7
-  build_ruby2_9:
-    <<: *build_definition
-    docker:
-      - image: ruby:2.6
-  build_ruby2_8:
-    <<: *build_definition
-    docker:
-      - image: ruby:2.5
-  build_ruby2_7:
-    <<: *build_definition
-    docker:
-      - image: ruby:2.4
-  build_ruby2_6:
-    <<: *build_definition
-    docker:
-      - image: ruby:2.3
-  build_ruby2_5:
-    <<: *build_definition
-    docker:
-      - image: ruby:2.7
-  build_ruby2_4:
-    <<: *build_definition
-    docker:
-      - image: ruby:2.6
-  build_ruby2_3:
-    <<: *build_definition
-    docker:
-      - image: ruby:2.5
-  build_ruby2_2:
-    <<: *build_definition
-    docker:
-      - image: ruby:2.4
-  build_ruby2_1:
-    <<: *build_definition
-    docker:
-      - image: ruby:2.3
-      
-workflows:
-  version: 2
-  build_ruby_versions:
-    jobs:
-      - build
-      - build_ruby2_22      
-      - build_ruby2_21     
-      - build_ruby2_20
-      - build_ruby2_19
-      - build_ruby2_18
-      - build_ruby2_17      
-      - build_ruby2_16     
-      - build_ruby2_15
-      - build_ruby2_14
-      - build_ruby2_13
-      - build_ruby2_12
-      - build_ruby2_11
-      - build_ruby2_10
-      - build_ruby2_9
-      - build_ruby2_8
-      - build_ruby2_7
-      - build_ruby2_6
-      - build_ruby2_5
-      - build_ruby2_4
-      - build_ruby2_3
-      - build_ruby2_2
-      - build_ruby2_1      
+version: 2.1 
+ 
+orbs: 
+   
+  python: circleci/python@1.2 
+ 
+workflows: 
+  sample:   
+    jobs: 
+      - job
+ 
+jobs: 
+  job:
+    parallelism: 16
+    docker: 
+      - image: cimg/python:3.8 
+     
+    steps: 
+      - checkout 
+      - run: chmod +x ./install.sh
+      - run: ./install.sh
